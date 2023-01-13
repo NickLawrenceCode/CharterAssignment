@@ -1,0 +1,84 @@
+{
+    "main": {
+        "customerList": [
+            {
+                "id": 0,
+                "name": "John Baker",
+                "transactions": [
+                    {
+                        "id": 0,
+                        "itemName": "item1",
+                        "cost": 25,
+                        "date": "11-22-2022"
+                    },
+                    {
+                        "id": 0,
+                        "itemName": "item4",
+                        "cost": 80,
+                        "date": "11-08-2022"
+                    },
+                    {
+                        "id": 0,
+                        "itemName": "item3",
+                        "cost": 100,
+                        "date": "07-22-2022"
+                    }
+                ],
+                "totalTransactionsCost": 205,
+                "totalPoints": null
+            },
+            {
+                "id": 1,
+                "name": "Chris Carpenter",
+                "transactions": [
+                    {
+                        "id": 0,
+                        "itemName": "item1",
+                        "cost": 25,
+                        "date": "10-26-2022"
+                    },
+                    {
+                        "id": 0,
+                        "itemName": "item2",
+                        "cost": 105,
+                        "date": "11-02-2022"
+                    },
+                    {
+                        "id": 0,
+                        "itemName": "item5",
+                        "cost": 45,
+                        "date": "09-22-2022"
+                    }
+                ],
+                "totalTransactionsCost": 175,
+                "totalPoints": null
+            },
+            {
+                "id": 2,
+                "name": "Elle Smith",
+                "transactions": [
+                    {
+                        "id": 0,
+                        "itemName": "item4",
+                        "cost": 80,
+                        "date": "11-28-2022"
+                    },
+                    {
+                        "id": 0,
+                        "itemName": "item2",
+                        "cost": 105,
+                        "date": "11-12-2022"
+                    },
+                    {
+                        "id": 0,
+                        "itemName": "item3",
+                        "cost": 100,
+                        "date": "10-22-2022"
+                    }
+                ],
+                "totalTransactionsCost": 285,
+                "totalPoints": null
+            }
+        ]
+    }
+}

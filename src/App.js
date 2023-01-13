@@ -1,25 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import $ from "jquery";
+import React, { Component} from 'react';
+import Transactions from './Components/Transactions'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pageData: {}
+    };
+  }
+
+  getPageData = () => {
+    console.log(this.state)
+    $.ajax({
+      url: "./pageData.json",
+      dataType: "json",
+      cache: false,
+      success: function (resData) {
+        this.setState({ pageData: resData });
+      }.bind(this),
+      error: (xhr, status, err) => {
+        console.log(err);
+        alert(err);
+      }
+    });
+  }
+
+  componentDidMount() {
+    this.getPageData();
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Transactions data={this.state.pageData.main} />
+      </div>
+    )
+  }
 }
 
 export default App;
